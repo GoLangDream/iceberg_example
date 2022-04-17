@@ -28,3 +28,16 @@ func (h *HomeController) GetSession() {
 		h.Text("session 的值为" + testSession.(string))
 	}
 }
+
+func (h *HomeController) SetCookie() {
+	h.Cookie("test_cookie", "test_cookie_value")
+}
+
+func (h *HomeController) GetCookie() {
+	testCookie := h.Cookie("test_cookie")
+	if testCookie == "" {
+		h.Text("testCookie 没有初始化")
+	} else {
+		h.Text("session 的值为" + testCookie)
+	}
+}
