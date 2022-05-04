@@ -13,5 +13,13 @@ func init() {
 
 		r.GET("/set_cookie", "home#set_cookie")
 		r.GET("/get_cookie", "home#get_cookie")
+
+		r.Namespace("admin", func(admin Router) {
+			admin.GET("/user", "user#index")
+		})
+
+		r.Scope("scope_test", func(scope Router) {
+			scope.GET("/hello", "home#index")
+		})
 	}
 }
