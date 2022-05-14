@@ -14,6 +14,9 @@ func init() {
 		r.GET("/set_cookie", "home#set_cookie")
 		r.GET("/get_cookie", "home#get_cookie")
 
+		r.GET("/get_params/:id", "home#get_params")
+		r.GET("/get_query", "home#get_query")
+
 		r.Namespace("admin", func(admin Router) {
 			admin.GET("/user", "user#index")
 		})

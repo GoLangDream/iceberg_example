@@ -41,3 +41,14 @@ func (h *HomeController) GetCookie() {
 		h.Text("session 的值为" + testCookie)
 	}
 }
+
+func (h *HomeController) GetParams() {
+	id := h.Param("id")
+	h.Text("id is " + id)
+}
+
+func (h *HomeController) GetQuery() {
+	name := h.Query("name")
+	age := h.Query("age", "1")
+	h.Text("name is " + name + " age is " + age)
+}
