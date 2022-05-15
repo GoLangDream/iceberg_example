@@ -2,6 +2,7 @@ package controllers
 
 import (
 	"github.com/GoLangDream/iceberg/web"
+	"routes/models"
 )
 
 func init() {
@@ -14,6 +15,12 @@ type HomeController struct {
 
 func (h *HomeController) Index() {
 	//h.Text("hello word")
+}
+
+func (h *HomeController) GetFirstUser() {
+	var user models.User
+	h.DB().First(&user)
+	h.Json(user)
 }
 
 func (h *HomeController) SetSession() {

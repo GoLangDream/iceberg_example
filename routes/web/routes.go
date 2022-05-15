@@ -6,6 +6,7 @@ import (
 
 func RouterDraw(r *Router) {
 	r.GET("/hello", "home#index")
+	r.GET("/get_first_user", "home#get_first_user")
 
 	r.GET("/set_session", "home#set_session")
 	r.GET("/get_session", "home#get_session")
