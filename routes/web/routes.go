@@ -1,8 +1,10 @@
 package web
 
-import . "github.com/GoLangDream/iceberg/web"
+import (
+	. "github.com/GoLangDream/iceberg/web"
+)
 
-func (app *RoutesApplication) RouterDraw(r *Router) {
+func RouterDraw(r *Router) {
 	r.GET("/hello", "home#index")
 
 	r.GET("/set_session", "home#set_session")
