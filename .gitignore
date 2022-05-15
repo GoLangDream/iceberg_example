@@ -19,3 +19,4 @@
 routes/go.work
 routes/go.work.sum
 routes/routes
+routes/config/database.yml
