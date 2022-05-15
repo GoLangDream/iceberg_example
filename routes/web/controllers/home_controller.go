@@ -13,7 +13,7 @@ type HomeController struct {
 }
 
 func (h *HomeController) Index() {
-	h.Text("hello word")
+	//h.Text("hello word")
 }
 
 func (h *HomeController) SetSession() {
