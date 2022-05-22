@@ -13,7 +13,7 @@ type UserController struct {
 func (c *UserController) Init() {
 	println("init controller")
 
-	c.BeforeActon("Index", c.checkAction)
+	c.BeforeAction(c.checkAction)
 }
 
 func (c *UserController) Index() {
